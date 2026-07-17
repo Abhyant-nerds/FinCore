@@ -1,0 +1,75 @@
+"""Shared enums for the Account Record Change module."""
+
+from enum import StrEnum
+
+
+class OperationType(StrEnum):
+    ADD = "ADD"
+    UPDATE = "UPDATE"
+    DELETE = "DELETE"
+
+
+class FieldAction(StrEnum):
+    ADD = "ADD"
+    REPLACE = "REPLACE"
+    REMOVE = "REMOVE"
+
+
+class Disposition(StrEnum):
+    AUTO_APPROVE = "AUTO_APPROVE"
+    REJECT = "REJECT"
+    REQUEST_INFORMATION = "REQUEST_INFORMATION"
+    HUMAN_REVIEW = "HUMAN_REVIEW"
+
+
+class ValidationStatus(StrEnum):
+    PASS = "PASS"
+    FAIL = "FAIL"
+    WARNING = "WARNING"
+    INDETERMINATE = "INDETERMINATE"
+
+
+class Severity(StrEnum):
+    INFO = "INFO"
+    WARNING = "WARNING"
+    ERROR = "ERROR"
+    CRITICAL = "CRITICAL"
+
+
+class FailureAction(StrEnum):
+    REJECT = "REJECT"
+    REQUEST_INFORMATION = "REQUEST_INFORMATION"
+    HUMAN_REVIEW = "HUMAN_REVIEW"
+
+
+class RequestStatus(StrEnum):
+    RECEIVED = "RECEIVED"
+    SCHEMA_VALIDATED = "SCHEMA_VALIDATED"
+    CONTEXT_LOADING = "CONTEXT_LOADING"
+    CONTEXT_LOADED = "CONTEXT_LOADED"
+    POLICY_RESOLVED = "POLICY_RESOLVED"
+    VALIDATION_IN_PROGRESS = "VALIDATION_IN_PROGRESS"
+    INFORMATION_REQUIRED = "INFORMATION_REQUIRED"
+    REVIEW_REQUIRED = "REVIEW_REQUIRED"
+    REJECTED = "REJECTED"
+    VALIDATED = "VALIDATED"
+    EXECUTION_PENDING = "EXECUTION_PENDING"
+    EXECUTING = "EXECUTING"
+    COMPLETED = "COMPLETED"
+    FAILED = "FAILED"
+
+
+class ReviewAction(StrEnum):
+    APPROVE = "APPROVE"
+    REJECT = "REJECT"
+    EDIT_VALUE = "EDIT_VALUE"
+    REQUEST_INFORMATION = "REQUEST_INFORMATION"
+    ESCALATE = "ESCALATE"
+
+
+class CommandExecutionStatus(StrEnum):
+    PREPARED = "PREPARED"
+    EXECUTING = "EXECUTING"
+    EXECUTED = "EXECUTED"
+    FAILED = "FAILED"
+
